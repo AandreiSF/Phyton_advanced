@@ -1,0 +1,1033 @@
+Part I: Process Automation 
+
+Q1. Create a file that contains 1000 lines of random strings. 
+import random
+
+# Number of rows and columns
+num_rows = 100
+num_columns = 30
+
+# Create the random dataset
+random_dataset = []
+for _ in range(num_rows):
+    row = [random.randint(1, 200) for _ in range(num_columns)]
+    random_dataset.append(row)
+
+# Print the random dataset (optional)
+for row in random_dataset:
+    print(row)
+
+
+Q2. Create a file that contains multiple lines of random strings and file size must be 5 MB. 
+
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file.txt"
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_mb = f.tell() / 1024 / 1024
+        print(f"Current file size: {current_size_mb} MB")
+
+print("File creation completed.")
+
+
+
+
+
+
+Q3. Create 10 files that contains multiple lines of random strings and file size of each file must be 5 MB. 
+File 1
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 2
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '4'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 3
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '2'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 4 
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '3'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+
+
+
+
+File 5
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '4'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 6
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '5'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '6'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+file 7
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '7'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 8
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '8'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+File 9
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '9'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+File 10
+import random
+import string
+
+# Specify the size of the file you want to create
+desired_file_size_mb = 5
+desired_file_size_bytes = desired_file_size_mb * 1024 * 1024  # Convert to bytes
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase + '10'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# The path where you want to save the files
+base_file_path = "random_text_file"
+
+for i in range(10):
+    file_path = f"{base_file_path}_{i}.txt"
+
+    # Open the file in write mode
+    with open(file_path, "w") as f:
+        while f.tell() < desired_file_size_bytes:
+            # Generate a random string of length 1000
+            random_string = generate_random_string(1000) + "\n"
+            # Write the string to the file
+            f.write(random_string)
+            # Flush the output buffer to ensure the data is written
+            f.flush()
+
+            # Print the current file size
+            current_size_mb = f.tell() / 1024 / 1024
+            print(f"Current size of {file_path}: {current_size_mb} MB")
+
+    print(f"File creation completed for {file_path}.")
+
+Q4. Create 5 files of size 1GB, 2GB, 3GB, 4GB and 5GB; file contains multiple lines of random strings. 
+File 1 -1GB
+import random
+import string
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 1
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_1GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_gb = f.tell() / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 2-2GB
+import random
+import string
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+desired_file_size_gb = 2
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_2GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_gb = f.tell() / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 3-3GB
+import random
+import string
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 3
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_3GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_gb = f.tell() / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 4-4GB
+import random
+import string
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+desired_file_size_gb = 4
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_4GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_gb = f.tell() / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 5-GB
+import random
+import string
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 5
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_5GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while f.tell() < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+        # Flush the output buffer to ensure the data is written
+        f.flush()
+
+        # Print the current file size
+        current_size_gb = f.tell() / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+
+
+
+
+Q5. Convert all the files of Q4 into upper case one by one. 
+File 1-1GB
+import random
+import string
+import os
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_uppercase  # Use uppercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 1
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_1GB.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while os.stat(file_path).st_size < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+
+        # Print the current file size
+        current_size_gb = os.stat(file_path).st_size / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+File 2- 2 GB
+import random
+import string
+import os
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_uppercase  # Use uppercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 2GB
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_2GB.txt"  # Updated file name to reflect size
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while os.stat(file_path).st_size < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+
+        # Print the current file size
+        current_size_gb = os.stat(file_path).st_size / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+
+File 3- 3GB
+import random
+import string
+import os
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_uppercase  # Use uppercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 3GB
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_3GB.txt"  # Name changed to reflect new size
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while os.stat(file_path).st_size < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+
+        # Print the current file size
+        current_size_gb = os.stat(file_path).st_size / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 4-4 GB
+import random
+import string
+import os
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_uppercase  # Use uppercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 4GB
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_4GB.txt"  # Updated the file name to reflect the new size
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while os.stat(file_path).st_size < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+
+        # Print the current file size
+        current_size_gb = os.stat(file_path).st_size / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+File 5- 5GB
+import random
+import string
+import os
+
+def generate_random_string(length):
+    # Generate a random string of fixed length
+    letters = string.ascii_uppercase  # Use uppercase letters
+    return ''.join(random.choice(letters) for _ in range(length))
+
+# Specify the size of the file you want to create
+desired_file_size_gb = 5GB
+desired_file_size_bytes = desired_file_size_gb * 1024 * 1024 * 1024  # Convert to bytes
+
+# The path where you want to save the file
+file_path = "random_text_file_5GB.txt"  # Changed file name to reflect new size
+
+# Open the file in write mode
+with open(file_path, "w") as f:
+    while os.stat(file_path).st_size < desired_file_size_bytes:
+        # Generate a random string of length 1000
+        random_string = generate_random_string(1000) + "\n"
+        # Write the string to the file
+        f.write(random_string)
+
+        # Print the current file size
+        current_size_gb = os.stat(file_path).st_size / 1024 / 1024 / 1024
+        print(f"Current size of {file_path}: {current_size_gb} GB")
+
+print(f"File creation completed for {file_path}.")
+
+
+Q6. Convert all the files of Q4 into upper case parallel using multi-threading. 
+File 1-1GB
+
+Q7. WAP to automatically download 10 images of cat from “Google Images”. [Hint: Find the package from pypi.org and use it] 
+import json
+import urllib.request
+
+num_images = 10
+
+# Headers to mimic a browser visit
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+
+for i in range(num_images):
+    req = urllib.request.Request('https://api.thecatapi.com/v1/images/search', headers=headers)
+    # Send a GET request to the API
+    with urllib.request.urlopen(req) as url:
+        data = json.loads(url.read().decode())
+        # Get the URL of the image from the JSON response
+        image_url = data[0]['url']
+
+        # Download the image
+        image_filename = 'cat_{}.jpg'.format(i+1)
+        # Create request for image url
+        req = urllib.request.Request(image_url, headers=headers)
+        # Open the url image
+        with urllib.request.urlopen(req) as response:
+            # Read and write the image
+            with open(image_filename, 'wb') as out_image:
+                out_image.write(response.read())
+        print('Downloaded image: {}'.format(image_filename))
+
+
+Q8. WAP to automatically download 10 videos of “Machine Learning” from “Youtube.com”. [Hint: Find the package from pypi.org and use it] 
+
+Q9. Convert all the videos of Q8 and convert it to audio. [Hint: Find the package from pypi.org and use it] 
+Q10. Create an automated pipeline using multi-threading for: “Automatic Download of 100 Videos from YouTube” → “Convert it to Audio”. 
+Q11. Create an automated pipeline using multi-threading for: “Automatic Download of 500 images of Dog from GoogleImages” → “Rescale it to 50%”.
+
+
+Part II: Data Analytics
+ Q12. Create a random dataset of 100 rows and 30 columns. All the values are defined between [1,200]. Perform the following operations:
+(i) Replace all the values with NA in the dataset defined between [10, 60]. Print the count of number rows having missing values. 
+(ii) Replace all the NA values with the average of the column value. 
+(iii) Find the Pearson correlation among all the columns and plot heat map. Also select those columns having correlation <=0.7. 
+(iv) Normalize all the values in the dataset between 0 and 10.
+ (v) Replace all the values in the dataset with 1 if value <=0.5 else with 0.
+
+
+
+
+
+
+Q13. Create a random dataset of 500 rows and 10 columns.
+ Columns 1 to 4 are defined between [-10, 10];
+
+import numpy as np
+
+# Set the number of rows and columns for the dataset
+num_rows = 500
+num_columns = 10
+
+# Define the ranges for columns 1 to 4
+column_ranges = [(-10, 10)] * 4
+
+# Create an empty NumPy array to store the random data
+random_data = np.empty((num_rows, num_columns))
+
+# Generate random data for columns 1 to 4 within their specified range
+for col_idx, (min_val, max_val) in enumerate(column_ranges):
+    random_data[:, col_idx] = np.random.uniform(min_val, max_val, num_rows)
+
+# Generate random data for columns 5 to 10 (assuming they are not restricted to a specific range)
+for col_idx in range(4, num_columns):
+    random_data[:, col_idx] = np.random.uniform(-10, 10, num_rows)
+
+# Print the first few rows of the random dataset
+print(random_data[:500, :])
+
+
+
+
+ Columns 5 to 8 are defined between [10, 20];
+import numpy as np
+
+# Set the number of rows and columns for the dataset
+num_rows = 500
+num_columns = 10
+
+# Define the ranges for columns 1 to 4 and columns 5 to 8
+column_ranges = [(-10, 10)] * 4 + [(10, 20)] * 4
+
+# Create an empty NumPy array to store the random data
+random_data = np.empty((num_rows, num_columns))
+
+# Generate random data for columns 1 to 8 within their specified range
+for col_idx, (min_val, max_val) in enumerate(column_ranges):
+    random_data[:, col_idx] = np.random.uniform(min_val, max_val, num_rows)
+
+# Generate random data for columns 9 and 10 (assuming they are not restricted to a specific range)
+for col_idx in range(8, num_columns):
+    random_data[:, col_idx] = np.random.uniform(0, 10, num_rows)
+
+# Print the first few rows of the random dataset
+print(random_data[:10, :])
+
+
+
+
+
+
+ Columns 9 to 10 are defined between [-100, 100]. 
+import numpy as np
+
+# Set the number of rows and columns for the dataset
+num_rows = 500
+num_columns = 10
+
+# Define the ranges for columns 1 to 4, columns 5 to 8, and columns 9 to 10
+column_ranges = [(-10, 10)] * 4 + [(10, 20)] * 4 + [(-100, 100)] * 2
+
+# Create an empty NumPy array to store the random data
+random_data = np.empty((num_rows, num_columns))
+
+# Generate random data for columns 1 to 10 within their specified range
+for col_idx, (min_val, max_val) in enumerate(column_ranges):
+    random_data[:, col_idx] = np.random.uniform(min_val, max_val, num_rows)
+
+# Print the first few rows of the random dataset
+print(random_data[:10, :])
+
+
+Apply following clustering algorithms; 
+determine the optimal number of clusters and plot distance metric graph using each algorithm.
+(i)	K-Mean clustering 
+(ii)	(ii) Hierarchical clustering
+
+
+
+
+
+Q14. Create a random dataset of 600 rows and 15 columns. 
+All the values are defined between [-100,100].
+
+import pandas as pd
+import numpy as np
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 600
+num_cols = 50
+
+# Create a DataFrame with random values
+df = pd.DataFrame(np.random.randint(-100, 101, size=(num_rows, num_cols)))
+
+# Print the DataFrame
+print(df)
+ Perform the following operations:
+(i)	Plot scatter graph between Column 5 and Column 6. 
+import pandas as pd
+import numpy as np
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 600
+num_cols = 50
+
+# Create a DataFrame with random values
+df = pd.DataFrame(np.random.randint(-100, 101, size=(num_rows, num_cols)))
+
+# Print (x, y) pairs for the fifth and sixth columns
+for i in range(num_rows):
+    print(f"(Column 5, Column 6) = ({df.iloc[i, 4]}, {df.iloc[i, 5]})")
+
+
+(ii)	Plot histogram of each column in single graph. 
+import pandas as pd
+import numpy as np
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 600
+num_cols = 50
+
+# Create a DataFrame with random values
+df = pd.DataFrame(np.random.randint(-100, 101, size=(num_rows, num_cols)))
+
+# Plot histogram for each column
+hist = df.hist(bins=30, figsize=(20,20))
+
+(iii)	Plot the Box plot of each column in single graph.
+import pandas as pd
+import numpy as np
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 600
+num_cols = 50
+
+# Create a DataFrame with random values
+df = pd.DataFrame(np.random.randint(-100, 101, size=(num_rows, num_cols)))
+
+# Plot boxplot for each column
+boxplot = df.boxplot(grid=False, vert=False,fontsize=15, figsize=(12,15))
+
+
+
+
+Q15. Create a random dataset of 500 rows and 5 columns: 
+
+All the values are defined between [5,10].
+
+import pandas as pd
+import numpy as np
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 500
+num_cols = 5
+
+# Create a DataFrame with random values between 5 and 10
+df = pd.DataFrame(np.random.randint(5, 11, size=(num_rows, num_cols)))
+
+# Print the DataFrame
+print(df)
+
+
+Perform the following operations:
+(i)	Perform t-Test on each column. 
+import pandas as pd
+import numpy as np
+
+# Custom function for one-sample t-test
+def t_test(sample, pop_mean):
+    sample_size = len(sample)
+    sample_mean = np.mean(sample)
+    sample_std = np.std(sample, ddof=1)  # ddof=1 provides an unbiased estimator of the variance
+    t_statistic = (sample_mean - pop_mean) / (sample_std / np.sqrt(sample_size))
+    return t_statistic
+
+# Set the random seed for reproducibility
+np.random.seed(0)
+
+# Define the size of the dataset
+num_rows = 500
+num_cols = 5
+
+# Create a DataFrame with random values
+df = pd.DataFrame(np.random.uniform(5, 10, size=(num_rows, num_cols)))
+
+# Perform t-Test on each column
+for i in df.columns:
+    t_stat = t_test(df[i], 7.5)
+    print(f'Column {i}: t-statistic = {t_stat}')
+
+
+
+(ii) Perform Wilcoxon Signed Rank Test on each column. 
+(iii) Perform Two Sample t-Test and Wilcoxon Rank Sum Test on Column 3 and Column 4
